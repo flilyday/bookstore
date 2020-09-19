@@ -1,4 +1,4 @@
-Post Type
+-Post Type
 post: 글 - 누적됨
 page: 페이지 - 한 번 써두고 변하지 않음. 소개 같은 것.
 attachment: 첨부 파일
@@ -6,7 +6,30 @@ revision: post, page의 과거 버전 기록
 nav_menu_item: 외모(Appearance)의 메뉴(Menu)에서 생성한 메뉴 항목
 우리가 해야 하는 건, book이라는 Custom Post Type을 만드는 것.
 
+-포스트 타입 만들기
 book custom post type을 만들어 봅니다.
 functions.php: 워드프레스가 기본으로 include하는 php 파일.
 register_post_type: 새 포스트 타입을 등록하는 함수.
 add_action: 특정 순간에 함수를 실행할 수 있도록 시점과 함수를 주입하는 함수.
+
+-wp_query
+$wp_query : 워드프레스에서 사용하는 쿼리 조회 객체.
+index.php파일에서 var_dump($wp_query)로 출력하여 확인.
+
+-새로운 포스트 타입의 아카이브 주소 만들기
+함수에 다음 항목 추가 : 'has_archive' => true,
+대시보드 들어가서 고유주소 수정버튼 누르기
+확인 : http://127.0.0.1:8080/book/book/
+
+-클라이언트 단에 콘텐츠 뿌리기
+if ( have_posts() ) {
+    while ( have_posts() ) {
+        the_post();
+        // 내용 표시
+    }
+}
+have_posts(): $wp_query에서 더 표시할 post가 있는지 검사. 있으면 true, 없으면 false 리턴.
+the_post(): template tag를 사용할 수 있게 $wp_query의 현재 post를 세팅. 현재 포스트를 한 칸 뒤로 이동한다.
+template tag: 워드프레스에서 정보를 동적으로 표시할 때 쓰는 함수들.
+
+

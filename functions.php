@@ -19,6 +19,8 @@ function mbs_register_post_type() {
             'not_found_in_trash'    => '휴지통에 책이 없습니다',
         ],
         'public' => true,
+        'menu_position' => 3,
+        'menu_icon' => 'dashicons-book-alt '
     ]);
 }
 

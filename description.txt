@@ -32,4 +32,10 @@ have_posts(): $wp_query에서 더 표시할 post가 있는지 검사. 있으면 
 the_post(): template tag를 사용할 수 있게 $wp_query의 현재 post를 세팅. 현재 포스트를 한 칸 뒤로 이동한다.
 template tag: 워드프레스에서 정보를 동적으로 표시할 때 쓰는 함수들.
 
+-기본적인 HTML골격 갖추게 하기(header와 footer구성)
+get_header(): header.php를 인클루드
+wp_head(): <head></head> 안에 들어갈 주요 내용을 구성해 출력
+wp_enqueue_style( 'handle-name', get_stylesheet_uri() ): 기본 스타일시트 인클루드
+add_action( 'wp_enqueue_scripts', 'function_name' ): 기본 스타일시트 인클루드 함수를 등록
+add_action( 'after_setup_theme', 'function_name' ): 기본 테마 설정 함수를 등록
 

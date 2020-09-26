@@ -39,3 +39,8 @@ wp_enqueue_style( 'handle-name', get_stylesheet_uri() ): 기본 스타일시트 
 add_action( 'wp_enqueue_scripts', 'function_name' ): 기본 스타일시트 인클루드 함수를 등록
 add_action( 'after_setup_theme', 'function_name' ): 기본 테마 설정 함수를 등록
 
+-워드프레스 액션의 개념
+특정지점에서 특정함수를 실행하라고 설정하는 것
+add_action()
+
+

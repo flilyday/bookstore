@@ -57,3 +57,23 @@ wp_enqueue_style( 'handle-name', get_stylesheet_uri() ); 기본 스타일시트 
 add_action( 'wp_enqueue_scripts', 'function_name' ); 기본 스타일시트 인클루드 함수를 등록
 add_action( 'after_setup_theme', 'function_name' ); 기본 테마 설정 함수를 등록
 
+-싱글 페이지 만들기
+싱글 페이지
+post(글)를 어떻게 보여줄 지, book(custom post type): single.php
+page(정적 페이지)를 어떻게 보여줄 지: page.php
+둘다 사용할 때 다음 파일을 이용해 한 번에 코딩 해 놓을 수 있다.: singular.php
+사용자화 : single-book.php
+
+출력 template tag
+the_title(): 제목을 출력
+the_permalink(): URL을 출력
+the_author(): 필자를 출력
+the_content(): 내용을 출력
+the_date(): 날짜를 출력
+
+가져오는 template tag
+get_the_title(): 제목을 가져옴
+get_the_permalink(): URL을 가져옴
+get_the_author(): 필자를 가져옴
+get_the_content(): 내용을 가져옴
+get_the_date(): 날짜를 가져옴

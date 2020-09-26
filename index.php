@@ -1,7 +1,8 @@
+<?php get_header() ?>
+
 <div>
     <a href=" <?= get_post_type_archive_link('book') ?> ">책 목록</a>
 </div>
-
 <ul>
     <?php
     if( have_posts() ) {
@@ -18,3 +19,5 @@
     }
     ?>
 <ul>
+
+<?php get_footer() ?>

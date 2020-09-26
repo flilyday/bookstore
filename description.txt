@@ -43,4 +43,17 @@ add_action( 'after_setup_theme', 'function_name' ): 기본 테마 설정 함수�
 특정지점에서 특정함수를 실행하라고 설정하는 것
 add_action()
 
+-스타일 불러오고 테마 기본 세팅하기
+index.php파일에서 헤더와 풋터 안 불러와서 추가
+<?php get_header() ?>
+<?php get_footerr() ?>
+
+두 가지 액션 지점
+after_setup_theme
+wp_enqueue_scripts
+
+코드
+wp_enqueue_style( 'handle-name', get_stylesheet_uri() ); 기본 스타일시트 포함
+add_action( 'wp_enqueue_scripts', 'function_name' ); 기본 스타일시트 인클루드 함수를 등록
+add_action( 'after_setup_theme', 'function_name' ); 기본 테마 설정 함수를 등록
 

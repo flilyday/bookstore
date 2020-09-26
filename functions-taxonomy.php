@@ -1,0 +1,61 @@
+<?php
+add_action('init', function(){
+    register_taxonomy('book_subject', 'book', [
+        'labels' => [
+            'name'              => '주제',
+            'singular_name'     => '주제',
+            'search_items'      => '주제 검색',
+            'all_items'         => '전체 주제',
+            'parent_item'       => '상위 주제',
+            'parent_item_colon' => '상위 주제:',
+            'edit_item'         => '주제 편집',
+            'update_item'       => '주제 수정',
+            'add_new_item'      => '주제 추가',
+            'new_item_name'     => '새 주제 이름',
+            'menu_name'         => '주제',
+        ],
+        'show_admin_column' => true, //관리자 대시보드에서 해당 필드를 보여주는 역
+        'hierarchical' => true, //분류기준간 계층구조를 만들어 준다.
+
+    ]);
+
+    register_taxonomy('book_author', 'book', [
+        'labels' => [
+            'name'              => '저자',
+            'singular_name'     => '저자',
+            'search_items'      => '저자 검색',
+            'all_items'         => '전체 저자',
+            'edit_item'         => '저자 편집',
+            'update_item'       => '저자 수정',
+            'add_new_item'      => '저자 추가',
+            'new_item_name'     => '새 저자 이름',
+            'menu_name'         => '저자',
+            'popular_items'     => '많이 사용한 저자',
+            'separate_items_with_commas'     => '저자를 쉽표로 구분해 주세요',
+            'add_or_remove_items'     => '저자 추가 제거',
+            'choose_from_most_used'     => '가장 많이 사용한 저자 고르기',
+        ],
+        'show_admin_column' => true,
+    ]);
+
+    register_taxonomy('book_translator', 'book', [
+        'labels' => [
+            'name'              => '역자',
+            'singular_name'     => '역자',
+            'search_items'      => '역자 검색',
+            'all_items'         => '전체 역자',
+            'edit_item'         => '역자 편집',
+            'update_item'       => '역자 수정',
+            'add_new_item'      => '역자 추가',
+            'new_item_name'     => '새 역자 이름',
+            'menu_name'         => '역자',
+            'popular_items'     => '많이 사용한 역자',
+            'separate_items_with_commas'     => '저자를 쉽표로 구분해 주세요',
+            'add_or_remove_items'     => '역자 추가 제거',
+            'choose_from_most_used'     => '가장 많이 사용한 역자 고르기',
+        ],
+        'show_admin_column' => true,
+    ]);
+
+
+});
